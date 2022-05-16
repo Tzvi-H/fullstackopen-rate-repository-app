@@ -1,20 +1,22 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Pressable } from "react-native";
 import Text from "./Text";
 
-const AppBarTab = () => {
+const AppBarTab = ({ handlePress }) => {
   return (
     <View>
-      <Text
-        style={{
-          backgroundColor: "#24292e",
-          color: "white",
-          padding: 48,
-        }}
-        fontWeight="bold"
-        fontSize="subheading"
-      >
-        Repositories
-      </Text>
+      <Pressable onPress={handlePress}>
+        <Text
+          style={{
+            backgroundColor: "#24292e",
+            color: "white",
+            padding: 48,
+          }}
+          fontWeight="bold"
+          fontSize="subheading"
+        >
+          Repositories
+        </Text>
+      </Pressable>
     </View>
   );
 };
